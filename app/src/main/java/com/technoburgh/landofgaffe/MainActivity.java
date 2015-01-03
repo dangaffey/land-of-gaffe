@@ -1,9 +1,11 @@
 package com.technoburgh.landofgaffe;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.technoburgh.landofgaffe.injection.DaggerApplication;
 
@@ -14,8 +16,21 @@ public class MainActivity extends Activity
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        ((DaggerApplication)super.getApplication()).inject(this);
+        ((DaggerApplication) super.getApplication()).inject(this);
         setContentView(R.layout.activity_main);
+        addListener();
+    }
+
+    private void addListener()
+    {
+        findViewById(R.id.new_game).setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                startActivity(new Intent(MainActivity.this, CharacterSelectActivity.class));
+            }
+        });
     }
 
     @Override

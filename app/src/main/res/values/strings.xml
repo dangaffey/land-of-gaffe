@@ -5,4 +5,9 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 
+    <!-- Character bios -->
+    <string name="puppy_king_bio">Once the ruling king in the Land of Gaffe, Byte-Tor the Puppy King, was dethroned and cast adrift into the Cerulean sea.
+        Byte-Tor was rescued by his royal protector, a Fiernes dragon, and starts his quest with his protector.</string>
+    <string name="title_activity_character_select">CharacterSelectActivity</string>
+
 </resources>

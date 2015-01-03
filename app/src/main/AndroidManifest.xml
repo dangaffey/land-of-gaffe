@@ -8,14 +8,24 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+
+
         <activity
-            android:name="com.technoburgh.landofgaffe.MainActivity"
-            android:label="@string/app_name" >
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+
+        <activity
+            android:parentActivityName=".MainActivity"
+            android:name=".CharacterSelectActivity"
+            android:label="@string/title_activity_character_select" >
         </activity>
     </application>
 
